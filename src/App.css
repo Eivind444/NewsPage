@@ -1,0 +1,157 @@
+.App {
+  background-color: rgb(238, 247, 255);
+  transition: background-color 230ms;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.AppDark{
+  background-color: rgb(27, 28, 29);
+  transition: background-color 230ms;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper{
+  padding-top: 8vh;
+}
+
+section{
+  column-count: 2;
+  column-gap: 4em;
+}
+
+.card, .cardDark {
+  opacity: 1;
+  transition: opacity 230ms;
+  display: inline-block;
+  width: 460px;
+  height: fit-content;
+  margin-top: 1em;
+  border-style: solid;
+  border: 10px;
+  border-color: black;
+  text-align: left;
+}
+
+.card {
+  background-color: white;
+  transition: background-color 230ms;
+}
+
+.cardDark {
+  background-color: rgb(16, 16, 19);
+  transition: background-color 230ms;
+  
+}
+
+.card > h2{
+  color: black;
+  margin-top: 0%;
+  margin-bottom: 2%;
+  margin-left: 0.5em;
+  text-decoration: none;
+}
+
+.cardDark > h2{
+  color: lightblue;
+  margin-top: 0%;
+  margin-bottom: 2%;
+  margin-left: 0.5em;
+  text-decoration: none;
+}
+
+.card:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 0.2em;
+}
+
+.cardDark:hover {
+  text-decoration: underline;
+  text-decoration-color: lightblue;
+  text-decoration-thickness: 0.2em;
+}
+
+a {
+  display: block;
+}
+
+img {
+  width: 460px;
+  height: auto;
+}
+
+.navBar {
+  background-color: rgb(15, 91, 126);
+  height: fit-content;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content:space-between;
+  align-content: center;
+}
+
+.navBar > a {
+  color: white;
+  margin-left: 1%;
+}
+
+.navBar > input {
+  height: 2em;
+  width: 25%;
+  align-self: center;
+}
+
+.themeButton, .themeButtonDark{
+  width: 3em;
+  height: 3em;
+  background-color: black;
+  align-self: center;
+  margin-right: 1.5em;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.themeButton {
+  background-color: black;
+}
+
+.themeButtonDark{
+  background-color: white;
+}
+
+.loading{
+  align-self: center;
+  content: " ";
+  display: block;
+  width: 8em;
+  height: 8em;
+  margin: 1em;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: rgb(40, 40, 40) transparent rgb(40, 40, 40) transparent;
+  animation: loadingSpinner 1.2s linear infinite;
+}
+
+
+@keyframes loadingSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
+
+@media only screen and (max-width: 1000px) {
+  
+  section{
+    column-count: 1;
+  }
+  
+}
